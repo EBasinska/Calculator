@@ -9,42 +9,39 @@
   </head>
   <body>
     <h1 class="title">Calculator</h1>
-    <article class="calc-background">
+    <article class="calculator">
       <div class="calc-row">
         <strong class="answer-number">0</strong>
       </div>
 
-      <section class="calc-row">
-        <button class="half-button grey-button">C</button>
-        <button class="quarter-button grey-button">&larr;</button>
-        <button class="quarter-button orange-button">%</button>
-      </section>
+      <div class="buttons-container">
+        <div class="inputs">
+          <div>
+            <button>C</button>
+            <button>&larr;</button>
+          </div>
 
-      <section class="calc-row">
-        <button class="quarter-button grey-button">7</button>
-        <button class="quarter-button grey-button">8</button>
-        <button class="quarter-button grey-button">9</button>
-        <button class="quarter-button orange-button">x</button>
-      </section>
-
-      <section class="calc-row">
-        <button class="quarter-button grey-button">4</button>
-        <button class="quarter-button grey-button">5</button>
-        <button class="quarter-button grey-button">6</button>
-        <button class="quarter-button orange-button">-</button>
-      </section>
-
-      <section class="calc-row">
-        <button class="quarter-button grey-button">3</button>
-        <button class="quarter-button grey-button">2</button>
-        <button class="quarter-button grey-button">1</button>
-        <button class="quarter-button orange-button">+</button>
-      </section>
-
-      <section class="calc-row">
-        <button class="large-button grey-button">0</button>
-        <button class="quarter-button orange-button">&equals;</button>
-      </section>
+          <ul class="numbers">
+            <li><button>1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+            <li><button>4</button></li>
+            <li><button>5</button></li>
+            <li><button>6</button></li>
+            <li><button>7</button></li>
+            <li><button>8</button></li>
+            <li><button>9</button></li>
+            <li><button>0</button></li>
+          </ul>
+        </div>
+        <ul class="operations">
+          <li><button>%</button></li>
+          <li><button>x</button></li>
+          <li><button>+</button></li>
+          <li><button>-</button></li>
+          <li><button>&equals;</button></li>
+        </ul>
+      </div>
     </article>
   </body>
 </html>
