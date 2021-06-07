@@ -8,6 +8,7 @@ button {
   outline: 0;
   cursor: pointer;
   font-size: inherit;
+  border: 1px solid #000000;
 }
 
 ul {
@@ -20,16 +21,63 @@ ul {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.buttons-container{
+  display: flex;
+}
+
+.inputs{
+  flex-basis: 66.66%;
+}
+
 .numbers {
   display: flex;
   flex-wrap: wrap;
 }
 
 .numbers li {
-  flex-basis: 33%;
+  flex-basis: 33.33%;
 }
 .numbers li:last-child {
   flex-basis: 100%;
+}
+
+.operations {
+  flex-basis: 33.33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.clear-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cancel-button {
+  flex-basis: 66.66%;
+}
+
+.back-button {
+  flex-basis: 33.33%;
+}
+
+.numbers button, .operations button {
+  width: 100%;
+}
+
+.inputs button {
+  background-color: #808080;
+}
+
+.operations button{
+  background-color: #ffa500;
+}
+
+.inputs button:hover {
+  background-color: #9b9b9b;
+}
+
+.operations button:hover{
+  background-color: #ffb62d;
 }
 
 .calculator {
