@@ -4,11 +4,14 @@
 
 button {
   border: 0;
-  padding: 0;
+  padding-right: 0px;
+  padding-left: 0px;
   outline: 0;
   cursor: pointer;
   font-size: inherit;
   border: 1px solid #000000;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 ul {
@@ -26,7 +29,7 @@ ul {
 }
 
 .inputs{
-  flex-basis: 66.66%;
+  flex-basis: 75%;
 }
 
 .numbers {
@@ -42,7 +45,7 @@ ul {
 }
 
 .operations {
-  flex-basis: 33.33%;
+  flex-basis: 25%;
   display: flex;
   flex-direction: column;
 }
@@ -80,6 +83,15 @@ ul {
   background-color: #ffb62d;
 }
 
+
+.inputs button:active {
+  background-color: #575757;
+}
+
+.operations button:active {
+  background-color: #ca8300;
+}
+
 .calculator {
   width: 400px;
   height: 600px;
@@ -106,55 +118,4 @@ ul {
   width: 90%;
   height: 99%;
   justify-content: flex-end;
-}
-
-.quarter-button {
-  margin: 0px;
-  display: flex;
-  width: 24.5%;
-  height: 99%;
-  justify-content: center;
-  align-items: center;
-}
-
-.half-button {
-  margin: 0px;
-  display: flex;
-  width: 49.5%;
-  height: 99%;
-  justify-content: center;
-  align-items: center;
-}
-
-.large-button {
-  margin: 0px;
-  display: flex;
-  width: 74.5%;
-  height: 99%;
-  justify-content: center;
-  align-items: center;
-}
-
-.grey-button {
-  background-color: #808080;
-}
-
-.orange-button {
-  background-color: #ffa500;
-}
-
-.grey-button:hover {
-  background-color: #9b9b9b;
-}
-
-.orange-button:hover {
-  background-color: #ffb62d;
-}
-
-.grey-button:active {
-  background-color: #575757;
-}
-
-.orange-button:active {
-  background-color: #ca8300;
 }
