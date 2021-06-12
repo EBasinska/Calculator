@@ -12,6 +12,7 @@ button {
   border: 1px solid #000000;
   padding-top: 25.8px;
   padding-bottom: 25.8px;
+  border-radius: 5px;
 }
 
 ul {
@@ -24,11 +25,11 @@ ul {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.buttons-container{
+.buttons-container {
   display: flex;
 }
 
-.inputs{
+.inputs {
   flex-basis: 75%;
 }
 
@@ -40,6 +41,7 @@ ul {
 .numbers li {
   flex-basis: 33.33%;
 }
+
 .numbers li:last-child {
   flex-basis: 100%;
 }
@@ -63,7 +65,8 @@ ul {
   flex-basis: 33.33%;
 }
 
-.numbers button, .operations button {
+.numbers button,
+.operations button {
   width: 100%;
 }
 
@@ -71,7 +74,7 @@ ul {
   background-color: #808080;
 }
 
-.operations button{
+.operations button {
   background-color: #ffa500;
 }
 
@@ -79,10 +82,9 @@ ul {
   background-color: #9b9b9b;
 }
 
-.operations button:hover{
+.operations button:hover {
   background-color: #ffb62d;
 }
-
 
 .inputs button:active {
   background-color: #575757;
@@ -101,12 +103,6 @@ ul {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
   border: 3px solid #000000;
-}
-
-.calc-row {
-  display: flex;
-  justify-content: space-around;
-  height: 100px;
 }
 
 .answer-number {
