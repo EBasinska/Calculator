@@ -113,3 +113,35 @@ ul {
   line-height: 100px;
   padding-right: 20px;
 }
+
+.explainer {
+ position: absolute;
+ display: block;
+ width: 270px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 14px;
+ line-height: 1.29;
+ background-color: #29B3BB;
+ color: #ffffff;
+ padding: 10px 10px 10px 10px;
+ border-radius: 8px 8px 0px 8px;
+}
+
+.example-to-copy{
+ display: block;
+ position: relative;
+ left: -30px;
+ bottom: -90px;
+ width: 360px;
+}
+
+.house {
+ display: block;
+ position: relative;
+ left: 275px;
+ bottom: -45px;
+ width: 45px;
+ background-color: #CDE1FE;
+ padding: 10px;
+ border-radius: 30px;
+}
