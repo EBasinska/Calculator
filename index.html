@@ -10,33 +10,33 @@
   <body>
     <h1 class="title">Calculator</h1>
     <article class="calculator">
-      <strong class="answer-number">0</strong>
+      <strong class="answer-number" id="answer">2</strong>
 
       <div class="buttons-container">
         <div class="inputs">
           <div class="clear-buttons">
-            <button class="cancel-button">C</button>
+            <button class="cancel-button" id="cancel" onclick="clearInput()">C</button>
             <button class="back-button">&larr;</button>
           </div>
 
           <ul class="numbers">
-            <li><button>1</button></li>
-            <li><button>2</button></li>
-            <li><button>3</button></li>
-            <li><button>4</button></li>
-            <li><button>5</button></li>
-            <li><button>6</button></li>
-            <li><button>7</button></li>
-            <li><button>8</button></li>
-            <li><button>9</button></li>
-            <li><button>0</button></li>
+            <li><button class="input-button">1</button></li>
+            <li><button class="input-button">2</button></li>
+            <li><button class="input-button">3</button></li>
+            <li><button class="input-button">4</button></li>
+            <li><button class="input-button">5</button></li>
+            <li><button class="input-button">6</button></li>
+            <li><button class="input-button">7</button></li>
+            <li><button class="input-button">8</button></li>
+            <li><button class="input-button">9</button></li>
+            <li><button class="input-button">0</button></li>
           </ul>
         </div>
         <ul class="operations">
-          <li><button>%</button></li>
-          <li><button>x</button></li>
-          <li><button>+</button></li>
-          <li><button>-</button></li>
+          <li><button class="input-button">%</button></li>
+          <li><button class="input-button">x</button></li>
+          <li><button class="input-button">+</button></li>
+          <li><button class="input-button">-</button></li>
           <li><button>&equals;</button></li>
         </ul>
       </div>

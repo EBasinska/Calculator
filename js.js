@@ -1,22 +1,42 @@
-let answer = 0;
-let currentDisplay = 0;
-let addTo = 0;
-let multiplyBy = 0;
-let divideBy = 0;
-let SubtractFrom = 0;
+let answer;
 
-function addition(answer, addTo) {
-  answer = answer + addTo;
+function clearInput() {
+  answer.innerText = "0";
 }
 
-function subtraction(answer, subtractFrom) {
-  answer = answer - subtractFrom;
+function add(input, value) {
+  return input + value;
 }
 
-function division(answer, divideBy) {
-  answer = answer / divideBy;
+function subtraction(input, value) {
+  return input - value;
 }
 
-function multiplication(answer, multiplyBy) {
-  answer = answer * multiplyBy;
+function division(input, divideBy) {
+  return input / divideBy;
 }
+
+function multiplication(input, multiplyBy) {
+  return input * multiplyBy;
+}
+
+window.onload = function () {
+  console.warn("teste");
+  answer = document.getElementById("answer");
+
+  const buttons = document.getElementsByClassName("input-button");
+
+  for (let button of buttons) {
+    console.log(button.innerText);
+    button.addEventListener("click", function () {
+      const answerText = answer.innerText;
+      const buttonText = button.innerText;
+
+      if (answerText === "0") {
+        answer.innerText = buttonText;
+      } else {
+        answer.innerText = answerText + buttonText;
+      }
+    });
+  }
+};
