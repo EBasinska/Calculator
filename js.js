@@ -30,16 +30,22 @@ equals.addEventListener("click", function () {
 });
 
 for (let button of buttons) {
-  const isOperationOnly = button.hasAttribute("data-operation-only");
+  const isOperation = button.hasAttribute("data-operation");
   button.addEventListener("click", function () {
     const answerText = answer.innerText;
     const buttonText = button.innerText;
+
+    function setNumericInput(inputText) {
+      answer.innerText = inputText;
+      isLastClickedAnOperation = false;
+      calculationText = calculationText + buttonText;
+    }
 
     // When answerText is 0 (calculator has just been opened)
     // a) Do nothing if operation has been clicked
     // add what was clicked to both displayed text and calculator memory
     if (answerText === "0") {
-      if (isOperationOnly) {
+      if (isOperation) {
         // if 1st thing clicked is a minus, treat as button, else ignore
         if (button.innerText === "-") {
           answer.innerText = buttonText;
@@ -52,29 +58,19 @@ for (let button of buttons) {
     } else {
       // When operation has been clicked, update calculator memory, but do nothing with displayed text
       // also flag that last clicked was an operation
-      if (isOperationOnly) {
-        if (!isLastClickedAnOperation) {
+      if (isOperation) {
+        if (isLastClickedAnOperation) {
+          // if operation was clicked when lastclicked was also an operation,
+          // replace last character of calculationText with current click
+          const newCalculationText = calculationText.substring(0, calculationText.length - 1);
+          calculationText = newCalculationText + buttonText;
+        } else {
           calculationText = calculationText + buttonText;
           isLastClickedAnOperation = true;
-        } else {
-          // if operation was clicked when lastclicked was also an operation, replace last character of calculationText with current click
-          calculationText = calculationText.substring(0, calculationText.length - 1);
-          calculationText = calculationText + buttonText;
         }
       } else {
-        if (isLastClickedAnOperation) {
-          // When button clicked is not an operation, and last button clicked was an operation,
-          // updated screen to show last clicked button and updates calculator memory
-          isLastClickedAnOperation = false;
-          answer.innerText = buttonText;
-          calculationText = calculationText + buttonText;
-        } else {
-          // When last clicked buttom wasn't and operation, and currently clicked button isn't an operation,
-          // update the screen and calculator memory
-          isLastClickedAnOperation = false;
-          answer.innerText = answerText + buttonText;
-          calculationText = calculationText + buttonText;
-        }
+        const numericInput = isLastClickedAnOperation ? buttonText : answerText + buttonText;
+        setNumericInput(numericInput);
       }
     }
   });
